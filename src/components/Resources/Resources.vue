@@ -44,7 +44,7 @@ export default {
     },
     addResource(title, description, url) {
       const newResource = { title: title, description: description, link: url };
-      this.resources.push(newResource);
+      this.resources.unshift(newResource);
       this.setLocalStorage("resources", this.resources);
       this.getLocalStorage("resources");
       this.selectedTab = "StoreResources";
